@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Resultado Cep</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card mt-2 mb-2">
+            <div class="card-body ">
+                <h3 class="mb-3">Resultado Cep</h3>
+                  <p>Nome: <strong><%= dado.logradouro %></strong></p>
+                   <p>Bairro: <strong><%= dado.bairro %></strong> </p>
+                   <p>Estado: <strong><%= dado.uf %></strong> </p>
+                   <p>DDD: <strong><%= dado.ddd %></strong> </p>
+            </div>
+        </div>
+        <a href="/" class="btn btn-outline-dark">Procurar outro endereço</a>
+    </div>
+
+
+</body>
+
+</html>
