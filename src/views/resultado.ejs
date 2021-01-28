@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Resultado Cep</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="card mt-2 mb-2">
+            <div class="card-body">
+                <div class="card-header bg-info">
+                    <h3>Achar endereço pelo CEP</h3>           
+                </div>
+                <p class="mt-5">Rua: <strong>
+                        <%= dado.logradouro %>
+                    </strong></p>
+                <p>Bairro: <strong>
+                        <%= dado.bairro %>
+                    </strong> </p>
+                <p>Estado: <strong>
+                        <%= dado.uf %>
+                    </strong> </p>
+                <p>DDD: <strong>
+                        <%= dado.ddd %>
+                    </strong> </p>
+            </div>
+        </div>
+        <a href="/" class="btn btn-outline-dark">Procurar outro endereço</a>
+    </div>
+    <div class="container mt-5">
+        <div class="card mt-2 mb-2">
+            <div class="card-body ">
+                <div class="card-header bg-danger">
+                    <h3>Resultado pesquisa do Usuário</h3>           
+                </div>
+                <div class="card mt-5" style="width: 18rem;">
+                    <img src="<%= dado.avatar_url %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= dado.name %>
+                        </h5>
+                        <p class="card-text"><strong>Bio: </strong><%= dado.bio %></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Rede Social: </strong><%= dado.blog %></li>
+                        <li class="list-group-item"><strong>Repositórios Públicos: </strong><%= dado.public_repos %></li>
+                        <li class="list-group-item"><strong>Seguidores: </strong><%= dado.followers %></li>
+                        <li class="list-group-item"><strong>Seguindo: </strong><%= dado.following %></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="<%= dado.html_url %>" class="card-link">Github</a>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <a href="/" class="btn btn-outline-dark">Procurar outro Usuário</a>
+        </div>
+
+
+</body>
+
+</html>
